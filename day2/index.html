@@ -1,0 +1,787 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/rnd_developers_logo_tiny.png">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/rnd_developers_logo.png"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/rnd_developers_icon_128.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Who the fuck am I?</h2>
+    </hgroup>
+    <article class="media">
+      <img src="images/rnd.jpg" class="person media-fig" alt="">
+      <ul class="media-bd build fade">
+        <li>Started learning php in early 2010</li>
+        <li>Obsessed.</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point out started getting obsessed on a clean code.</li>
+          <li>DRY and KISS</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Primary Topics</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Client side and Server Side Languages</li>
+        <li>The Language</li>
+        <li>Database Connection</li>
+        <li>Tips and Tricks</li>
+      </ul>
+    </article>
+    <hgroup>
+      <h2>Trend</h2>
+    </hgroup>
+    <article>
+      <ul class="build">
+        <li>Javascript</li>
+      </ul>
+    </article>
+  </slide>
+
+  <!-- ZEN MODE -->
+  <slide class="fill nobackground" style="background: url(images/zen1.jpg) center center">
+    <hgroup>
+      <h2>Zen.......</h2>
+    </hgroup>
+    <article>
+      <p>Questions?</p>
+    </article>
+  </slide>
+  <!-- End Zen -->
+
+  <slide>
+    <hgroup>
+      <h2>Client Side and Server Side Languages</h2>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+        <li>What are web servers?</li>
+        <li>Difference of Client Side and Server Side Languages</li>
+        <li><img src="images/how.png" alt=""></li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <h3>On what are web servers:</h3>
+        <ul>
+          <li>Show an example using your own machine</li>
+        </ul>
+        <h3>On diff:</h3>
+        <ul>
+          <li>Point out that server side, execute, processes things out first</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Example</h2>
+    </hgroup>
+    <article>
+    <h3>Server-side Code</h3>
+      <pre class="prettyprint" data-lang="php">
+&lt;ul&gt;
+&lt;?php for($i=0; i&lt;3; i++): ?&gt;
+  &lt;li&gt;&lt;? echo $i; ?&gt;&lt;/li&gt;
+&lt;?php endfor ?&gt;
+&lt;/ul&gt;
+      </pre>
+      <!-- pre.prettyprint[data-lang="html"] -->
+    <h3>Processed Output</h3>
+      <pre class="prettyprint" data-lang="html">
+&lt;ul&gt;
+  &lt;li&gt;0&lt;/li&gt;
+  &lt;li&gt;1&lt;/li&gt;
+  &lt;li&gt;2&lt;/li&gt;
+&lt;/ul&gt;
+      </pre>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that I hate to do it, but just recently.</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Getting Started.</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+  echo "hello world!";
+      </pre>
+      <h2>Saving..</h2>
+      <p>
+        <ul>
+          <li>Save in www or htdocs folder</li>
+          <li>Save it with a '.php' extenstion</li>
+        </ul>
+      </p>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that htdocs folder is what the process(server) is using.</li>
+          <li>Show how does it happen.</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>So what is the point?</h2>
+    </hgroup>
+    <article>
+      <h3>If you can just do.</h3>
+      <p>
+        <pre class="prettyprint" data-lang="html">
+hello world!
+        </pre>
+      </p>
+      <h2>This is the point.</h2>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+  echo 1+1;
+      </pre>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Uses of Php</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>As a templating language</li>
+        <li>As a programming language</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>It maps to registry of addresses, then serves it right</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <!-- start HTML TOPIC -->
+  <slide>
+    <hgroup>
+      <h2>The Markup</h2>
+    </hgroup>
+    <article class="media">
+      <img src="images/html-block.jpg" alt="" class="media-fig">
+      <p class="media-bd">
+        HTML is Hypertext Markup Language, and the latest iteration of this lingua franca is HTML5.
+      </p>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that being a markup, it has parts</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>And previously...</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>VB Elements == HTML Elements</li>
+        <li>VB Elements' Properties = HTML Properties (CSS)</li>
+      </ul>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point out it is really it is</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Elements</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/vb-elements.jpg" class="slide-img-full-height">
+      <footer class="source">source: vb.net</footer>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Properties</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/vb-props.jpg" class="slide-img-full-height">
+      <footer class="source">source: vb.net</footer>
+    </article>
+  </slide>
+
+  <!-- ZEN MODE -->
+  <slide class="fill nobackground" style="background: url(images/zen1.jpg) center center">
+    <hgroup>
+      <h2 class="white">Moment of Zen</h2>
+    </hgroup>
+    <article>
+      <p class="white">Relax for a bit, absorb everything.</p>
+    </article>
+  </slide>
+  <!-- End Zen -->
+  
+  <!-- Try 1 -->
+  <slide>
+    <hgroup>
+      <h2>Try it out a bit.</h2>
+      <h3>just before moving on.</h3>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Some Title &lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    <b>&lt;form action=""&gt;
+      &lt;label for="text"&gt;Label1&lt;/label&gt;
+      &lt;input type="text" name="text" id=""&gt;
+      &lt;label for="check"&gt;Checkbox1&lt;/label&gt;
+      &lt;input type="checkbox" name="check" id=""&gt;
+      &lt;button&gt;Button&lt;/button&gt;
+    &lt;/form&gt;</b>
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>PRESS h!!!!!!!!!!!!</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Useful Tagss</h2>
+    </hgroup>
+    <article>
+      <ul class="build fade">
+        <li>Formatting Tags</li>
+        <li>Action Tags?</li>
+        <li>Media Tags?</li>
+        <li>Layout Tags?</li>
+      </ul>
+      <footer>
+        <p>Cheatsheet.</p>
+        <b><a href="http://goo.gl/rRrHJh">hhttp://goo.gl/rRrHJh</a></b>
+      </footer>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that I just invented those names</li>
+        </ul>
+      </section>
+    </aside>
+
+  </slide>
+  <!-- Formatting tags -->
+  <slide>
+    <hgroup>
+      <h2>Formatting Tags</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>headers(h1, h2, h3 ... )</li>
+        <li>font(b, i)</li>
+        <li>etc (pre, code)</li>
+      </ul>
+      <pre class="prettyprint" data-lang="html">
+&lt;h1&gt; Title Here &lt;/h1&gt;
+&lt;h2&gt; some subtitle &lt;/h2&gt;
+&lt;p&gt;
+  &lt;b&gt;bold text here&lt;/b&gt;&lt;br&gt;
+  &lt;i&gt;italic text here&lt;/i&gt;&lt;br&gt;
+  &lt;b&gt;&lt;i&gt;bold and italic&lt;i&gt;&lt;/b&gt;
+&lt;/p&gt;
+    </pre>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that many tags are just for semantic purposes</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <!-- Media Tags -->
+  <slide>
+    <hgroup>
+      <h2>Media Tags</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>image tags(img)</li>
+        <li>others(audio, video)</li>
+      </ul>
+      <pre class="prettyprint" data-lang="html">
+&lt;img src="images/some.jpg"&gt;
+    </pre>
+    <p>
+      Would result to something like<br>
+      <img src="images/google-io.png" height="100px" alt="">
+    </p>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>For inserting media objects, like images, audio, video</li>
+          <li>Point out that using embed solutions of 3rd party chuva is more effecient.</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <!-- Action Tags -->
+  <slide>
+    <hgroup>
+      <h2>Action Tags</h2>
+    </hgroup>
+    <article>
+      <ul>
+        <li>anchor tags(img)</li>
+        <li>others(input elements)</li>
+      </ul>
+      <pre class="prettyprint" data-lang="html">
+&lt;a href="http://google.com"&gt;Link to google.com&lt;/a&gt;
+&lt;button&gt;Button&lt;/button&gt;
+&lt;select&gt;
+  &lt;option value="1"&gt;Option 1&lt;/option&gt;
+  &lt;option value="2"&gt;Option 2&lt;/option&gt;
+&lt;/select&gt;
+    </pre>
+    <p>
+      Would result to something like<br>
+      <a href="//google.com">Link to google.com</a>
+      <button>Button</button>
+      <select>
+        <option value="1">Option 1</option>
+        <option value="2">Option 2</option>
+      </select>
+    </p>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that action tags are tags that causes some behavior to the page, like redirecting to another page or another anchor</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <!-- Layout Tags -->
+  <slide>
+    <hgroup>
+      <h2>Layout Tags</h2>
+      <h3>There are three types</h3>
+    </hgroup>
+    <article>
+      <ul>
+        <li>Inline</li>
+        <li>Block</li>
+        <li>Inline Block</li>
+      </ul>
+      <hgroup>
+        <h2 style="background-color:yellow">For Example</h2>
+      </hgroup>
+      <br>
+    <pre class="prettyprint" data-lang="html" contenteditable>
+&lt;h2&gt;For Example&lt;/h2&gt;
+    </pre>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point that the props of layout tags are found in other tags too.</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <!-- Include Tags -->
+  <slide>
+    <hgroup>
+      <h2>Include Tags</h2>
+    </hgroup>
+    <article>
+      <h2>For Example</h2>
+      <br>
+    <pre class="prettyprint" data-lang="html">
+&lt;link rel="stylesheet" href="stylesheet/main.css"&gt;
+&lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+    </pre>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point out that these tags include styles and behavior to our markup.</li>
+          <li>Point that I may have missed some html elements, but those can be learned on your way.</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/stackoverflow-64.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        Yes. There is a differentiation between src and href and they can't be used interchangeably. We use src for replaced elements while href for establishing a relationship between the referencing document and an external resource.
+      </q>
+      <div class="author">
+        <a href="//stackoverflow.com/a/7794936/1328014">apnerve</a>
+      </div>
+    </article>
+  </slide>
+  <!-- ID AND CLASSES -->
+
+  <slide>
+    <hgroup>
+      <h2> Ids and Classes</h2>
+    </hgroup>
+    <article class="smaller">
+      <p>
+        These two are called selectors or identifiers.<br>
+        <h3>Example</h3>
+<pre class="prettyprint" data-lang="html">
+&lt;div id="facebook" class="social-icon rotate"&gt;&lt;/div&gt;
+&lt;div id="twitter" class="social-icon"&gt;&lt;/div&gt;
+&lt;div class="clear"&gt;&lt;/div&gt;
+</pre>
+<br>
+<style>
+#facebook { background: url('images/facebook-icon.png'); }
+#twitter { background: url('images/twitter-icon.png'); }
+.social-icon { height: 32px; float: left; width: 32px; margin-right: 1em;}
+.rotate {-webkit-transform: rotate(45deg); }
+.clear { clear: both;}
+</style>
+
+<div id="facebook" class="social-icon rotate"></div>
+<div id="twitter" class="social-icon"></div>
+<div class="clear"></div>
+  <br>
+<pre class="prettyprint" data-lang="css">
+#facebook { background: url('images/facebook-icon.png'); }
+#twitter { background: url('images/twitter-icon.png'); }
+.social-icon { height: 32px; float: left; width: 32px; margin-right: 1em;}
+.rotate {-webkit-transform: rotate(45deg); }
+</pre>
+      </p>
+
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Point out, that these are needed to have something you can call</li>
+          <li>Point that if you call "Aaron", si aaron lang ang lilingon.</li>
+          <li>But if you call, hey "Heart broken", si aaron at si jm lilingon</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+
+  <!-- ZEN MODE -->
+  <slide class="fill nobackground" style="background: url(images/zen2.jpg) center center">
+    <hgroup>
+      <h2 class="white">Moment of Zen</h2>
+    </hgroup>
+    <article>
+      <p class="white">Open for Questions</p>
+    </article>
+  </slide>
+  <slide class="fill nobackground" style="background: url(images/zen3.jpg) center center repeat-x; background-size: contain">
+    <hgroup>
+      <h2 class="white">Moment of Zen</h2>
+    </hgroup>
+    <article>
+      <p class="white">Open for Questions</p>
+    </article>
+  </slide>
+  <!-- End Zen -->
+
+  <slide>
+    <hgroup>
+      <h2>Recap...</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/vb-props.jpg" class="slide-img-full-height">
+      <footer class="source">source: vb.net</footer>
+    </article>
+    <aside class="note">
+      <section>
+        <ul>
+          <li>Remember the analogy between vb and our lesson</li>
+        </ul>
+      </section>
+    </aside>
+  </slide>
+  
+  <!-- CSS -->
+
+  <slide>
+    <hgroup>
+      <h2>The Style</h2>
+    </hgroup>
+    <article>
+      <h3>CSS Stands for CasCading Stylesheet</h3>
+      <p>Made up of
+        <ul class="build fade">
+           <li>selectors,</li>
+           <li>properties and</li>
+           <li>values</li>
+        </ul>
+      </p>
+<pre class="prettyprint" data-lang="css">
+.social-icon { 
+  height: 32px;
+  float: left;
+  width: 32px;
+  margin-right: 1em;
+}
+</pre>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Getting Started</h2>
+    </hgroup>
+    <article>
+<pre class="prettyprint" data-lang="html">
+&lt;!doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Some Title &lt;/title&gt;
+    &lt;link rel="stylesheet" href="stylesheet/main.css"&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container"&gt;
+      &lt;div class="header"&gt;Some Title in Here &lt;/div&gt;
+      &lt;nav class="side_navigation"&gt;...&lt;/nav&gt;
+      &lt;div class="content"&gt;...&lt;/div&gt;
+      &lt;aside class="advertisements"&gt;...&lt;/aside&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    </pre>
+    </article>
+  </slide>
+  <slide>
+    <style>
+
+
+      .tatay li:nth-child(odd) {
+        color: red;
+      }
+
+      .tatay li:hover {
+        color: blue;
+      }
+    </style>
+    <ul class="tatay">
+      <li>abc<br></li>
+      <li>def</li>
+      <li>ghi</li>
+    </ul>
+    <pre class="prettyprint" data-lang="html">
+      &lt;div class="tatay"&gt;
+        &lt;label&gt;abc&lt;/label&gt;&lt;br&gt;
+        &lt;label&gt;def&lt;/label&gt;
+        &lt;label&gt;ghi&lt;/label&gt;
+      &lt;/div&gt;
+    </pre>
+    <pre class="prettyprint" data-lang="css">
+      .tatay label:nth-child(odd) {
+        color: red;
+      }
+
+      .tatay label:hover !important{
+        color: blue;
+      }
+    </pre>
+  </slide>
+
+  <!-- Box Model Explained -->
+  <slide>
+    <hgroup>
+      <h2>The Box Model</h2>
+    </hgroup>
+    <article class="media">
+      <div class="media-bd">
+        There are several things affecting the layout of a page<br>
+<pre class="prettyprint" data-lang="css">        
+figure {
+  height: 100px;
+  width: 100px;
+  border: 20px solid yellow;
+  padding: 40px;
+  margin: 40px;  
+}
+</pre>
+
+      </div>
+      <figure class="media-fig" style="height:100px; width: 100px; border: 20px solid yellow; padding: 40px; margin: 40px"></figure>
+    </article>
+  </slide>
+  <slide>
+    <hgroup>
+      <h2>Box Sizing: Borderbox</h2>
+    </hgroup>
+    <article class="media">
+      <div class="media-bd">
+        But if the property "box-sizing" was set to "border-box"<br>
+<pre class="prettyprint" data-lang="css">        
+figure {
+  height: 100px;
+  width: 100px;
+  border: 20px solid yellow;
+  padding: 40px;
+  margin: 40px;  
+  box-sizing: border-box;
+}
+</pre>
+      </div>
+      <figure class="media-fig" style="height:100px; width: 100px; border: 20px solid yellow; padding: 40px; margin: 40px; box-sizing: border-box"></figure>
+    </article>
+  </slide>
+
+  <!-- Half Way -->
+  <slide>
+    <hgroup>
+      <h2>Halfway</h2>
+    </hgroup>
+    <article class="flexbox vcenter">
+      <img src="images/halfway.jpg" class="slide-img-full-height">
+    </article>
+  </slide>
+  <!-- end half -->
+
+  <!-- ZEN MODE -->
+  <slide class="fill nobackground" style="background: url(images/zen4.jpg) center center">
+    <hgroup>
+      <h2 class="white">Questions</h2>
+    </hgroup>
+    <article>
+      <p class="white">#afterbreak</p>
+    </article>
+  </slide>
+  <!-- End Zen -->
+
+  <slide>
+    <hgroup>
+      <h2>Tips and Tricks</h2>
+    </hgroup>
+    <article class="smaller">
+      <hgroup>
+        <h3>Planning</h3>
+      </hgroup>
+      <ul class="build fade">
+        <li>Draw a picture in your mind</li>
+        <li>on a paper</li>
+        <li>on photoshop, fireworks, paint</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide class="fill nobackground" style="background: url(images/sample-wireframe.jpg) left top; background-size: cover">
+  </slide>
+
+  <slide class="fill nobackground" style="background: url(images/mobile-wireframe.jpg) left top; background-size: cover">
+  </slide>
+
+  <slide class="fill nobackground" style="background: url(images/desktop-wireframe.jpg) left top; background-size: cover">
+    <hgroup>
+      <h2>Explain</h2>
+    </hgroup>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/rnd_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+      <p>Important contact information goes here.</p>
+    </article>
+    <p class="auto-fadein" data-config-contact>
+      <!-- populated from slide_config.json -->
+    </p>
+  </slide>
+
+  <slide class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/rnd_developers_logo_white.png"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
