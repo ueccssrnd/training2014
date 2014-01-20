@@ -86,12 +86,12 @@ URL: https://code.google.com/p/io-2012-slides
   </slide>
 
   <!-- ZEN MODE -->
-  <slide class="fill nobackground" style="background: url(images/zen1.jpg) center center">
+  <slide class="fill nobackground" style="background: url(images/zen4.jpg) center center">
     <hgroup>
-      <h2>Zen.......</h2>
+      <h2 class="white">Zen.......</h2>
     </hgroup>
     <article>
-      <p>Questions?</p>
+      <p class="white">Questions?</p>
     </article>
   </slide>
   <!-- End Zen -->
@@ -209,75 +209,115 @@ hello world!
     <aside class="note">
       <section>
         <ul>
-          <li>It maps to registry of addresses, then serves it right</li>
+          <li>Just keep that in mind for a while.</li>
         </ul>
       </section>
     </aside>
   </slide>
 
-  <!-- start HTML TOPIC -->
+  <!-- start Programming Basics -->
+  <slide class="fill nobackground" style="background: url(images/datatypes.jpg) center center no-repeat">
+  </slide>
+
   <slide>
     <hgroup>
-      <h2>The Markup</h2>
+      <h2>Data Types</h2>
     </hgroup>
-    <article class="media">
-      <img src="images/html-block.jpg" alt="" class="media-fig">
-      <p class="media-bd">
-        HTML is Hypertext Markup Language, and the latest iteration of this lingua franca is HTML5.
+    <article>
+      <h3>String . . . Integer . . . Double . . .</h3>
+        <pre class="prettyprint" data-lang="php">
+&lt;?php
+$a = "Hello";
+$b = 1;
+$c = 1.1;
+echo '$a : ' . gettype($a) . '&lt;br&gt;';
+echo '$b : ' . gettype($b) . '&lt;br&gt;';
+echo '$c : ' . gettype($c) . '&lt;br&gt;';
+?&gt;
+        </pre>
       </p>
     </article>
     <aside class="note">
       <section>
         <ul>
-          <li>Point that being a markup, it has parts</li>
+          <li>Point it's just hanging around with the syntax.</li>
         </ul>
       </section>
     </aside>
   </slide>
+
   <slide>
     <hgroup>
-      <h2>And previously...</h2>
+      <h2>Operators</h2>
     </hgroup>
     <article>
-      <ul>
-        <li>VB Elements == HTML Elements</li>
-        <li>VB Elements' Properties = HTML Properties (CSS)</li>
-      </ul>
+      <h3>Assignment, Logical, Conditional, Arithmetic</h3>
+        <pre class="prettyprint" data-lang="php">
+&lt;?php
+$a = "Hello"; // assigment op
+echo $a === "Hello";
+echo $b > 2;
+echo $c == 1.1 ? "true" : "false";
+echo '$b : ' . gettype($b) . '&lt;br&gt;';
+echo '$c : ' . gettype($c) . '&lt;br&gt;';
+?&gt;
+        </pre>
+      </p>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>And so on...</h2>
+    </hgroup>
+    <article>
+      <p>
+        <h3>Just like what is taught in programming classes</h3>
+        <ul class="build">
+          <li>Control Structures</li>
+          <li>Iterations</li>
+          <li>Functions</li>
+          <li>Arrays</li>
+        </ul>
+      </p>
     </article>
     <aside class="note">
       <section>
         <ul>
-          <li>Point out it is really it is</li>
+          <li>Point that it is programming.</li>
         </ul>
       </section>
     </aside>
   </slide>
   <slide>
     <hgroup>
-      <h2>Elements</h2>
+      <h2>What we are really up to?</h2>
     </hgroup>
-    <article class="flexbox vcenter">
-      <img src="images/vb-elements.jpg" class="slide-img-full-height">
-      <footer class="source">source: vb.net</footer>
+    <article>
+      <ul class="build">
+        <li>Handling user input</li>
+        <li>Database manipulation</li>
+        <li>Sessions</li>
+      </ul>
     </article>
   </slide>
   <slide>
     <hgroup>
-      <h2>Properties</h2>
+      <h2>Handling User Input</h2>
     </hgroup>
     <article class="flexbox vcenter">
-      <img src="images/vb-props.jpg" class="slide-img-full-height">
-      <footer class="source">source: vb.net</footer>
+      <img src="images/login.png" class="slide-img-full-height">
+      <footer class="source">source: http://drbl.in/gRLN</footer>
     </article>
   </slide>
 
   <!-- ZEN MODE -->
-  <slide class="fill nobackground" style="background: url(images/zen1.jpg) center center">
+  <slide class="fill nobackground" style="background: url(images/zen2.jpg) center center">
     <hgroup>
       <h2 class="white">Moment of Zen</h2>
     </hgroup>
     <article>
-      <p class="white">Relax for a bit, absorb everything.</p>
+      <p class="white">Relax for a bit. Questions.</p>
     </article>
   </slide>
   <!-- End Zen -->
@@ -289,110 +329,82 @@ hello world!
       <h3>just before moving on.</h3>
     </hgroup>
     <article>
-      <pre class="prettyprint" data-lang="html">
-&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Some Title &lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    <b>&lt;form action=""&gt;
-      &lt;label for="text"&gt;Label1&lt;/label&gt;
-      &lt;input type="text" name="text" id=""&gt;
-      &lt;label for="check"&gt;Checkbox1&lt;/label&gt;
-      &lt;input type="checkbox" name="check" id=""&gt;
-      &lt;button&gt;Button&lt;/button&gt;
-    &lt;/form&gt;</b>
-  &lt;/body&gt;
-&lt;/html&gt;
-    </pre>
-    </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>PRESS h!!!!!!!!!!!!</li>
-        </ul>
-      </section>
-    </aside>
-  </slide>
-
-  <slide>
-    <hgroup>
-      <h2>Useful Tagss</h2>
-    </hgroup>
-    <article>
-      <ul class="build fade">
-        <li>Formatting Tags</li>
-        <li>Action Tags?</li>
-        <li>Media Tags?</li>
-        <li>Layout Tags?</li>
-      </ul>
-      <footer>
-        <p>Cheatsheet.</p>
-        <b><a href="http://goo.gl/rRrHJh">hhttp://goo.gl/rRrHJh</a></b>
-      </footer>
-    </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point that I just invented those names</li>
-        </ul>
-      </section>
-    </aside>
-
-  </slide>
-  <!-- Formatting tags -->
-  <slide>
-    <hgroup>
-      <h2>Formatting Tags</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>headers(h1, h2, h3 ... )</li>
-        <li>font(b, i)</li>
-        <li>etc (pre, code)</li>
-      </ul>
-      <pre class="prettyprint" data-lang="html">
-&lt;h1&gt; Title Here &lt;/h1&gt;
-&lt;h2&gt; some subtitle &lt;/h2&gt;
+      <pre class="prettyprint" data-lang="mix">
+&lt;h1&gt;Login&lt;/h1&gt;
 &lt;p&gt;
-  &lt;b&gt;bold text here&lt;/b&gt;&lt;br&gt;
-  &lt;i&gt;italic text here&lt;/i&gt;&lt;br&gt;
-  &lt;b&gt;&lt;i&gt;bold and italic&lt;i&gt;&lt;/b&gt;
+  &lt;?php
+    $submitted = filter_input(INPUT_POST, 'submit');
+    if(isset($submitted)) {
+      $user = filter_input(INPUT_POST, 'username');
+      $pwd = filter_input(INPUT_POST, 'password');
+      echo "result &gt;&gt; username : $user && password : $pwd";
+    }
+  ?&gt;
 &lt;/p&gt;
+&lt;form action="" method="post"&gt;
+  &lt;input type="text" name="username" placeholder="username"&gt;
+  &lt;input type="password" name="password" placeholder="password"&gt;
+  &lt;button type="submit" name="submit" value="submit"&gt;Login&lt;/button&gt;
+&lt;/form&gt;
     </pre>
     </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point that many tags are just for semantic purposes</li>
-        </ul>
-      </section>
-    </aside>
   </slide>
-  <!-- Media Tags -->
+
   <slide>
     <hgroup>
-      <h2>Media Tags</h2>
+      <h2>Sample Directory Structure</h2>
     </hgroup>
     <article>
+      <pre class="prettyprint" data-lang="mix">
+  app/
+    handlers/
+      -signin.php
+      -signup.php
+    includes/
+      -footer.php
+      -header.php
+    -index.php
+    -login.php
+    -register.php
+      </pre>
+    </article>
+  </slide>
+
+  <!-- Database Manipulation -->
+  <slide>
+    <hgroup>
+      <h2>Database Manipulation</h2>
+    </hgroup>
+    <article>
+      <h3>There are basic things to do in a db</h3>
       <ul>
-        <li>image tags(img)</li>
-        <li>others(audio, video)</li>
+        <li>create</li>
+        <li>read</li>
+        <li>update</li>
+        <li>delete</li>
       </ul>
-      <pre class="prettyprint" data-lang="html">
-&lt;img src="images/some.jpg"&gt;
+      <h3>entries... also known as CRUD operations</h3>
+    </article>
+  </slide>
+  <!-- Connection -->
+  <slide>
+    <hgroup>
+      <h2>Connection</h2>
+    </hgroup>
+    <article>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+$dbh = new PDO('mysql:host=localhost;dbname=test', 'root', 'root');
     </pre>
     <p>
-      Would result to something like<br>
-      <img src="images/google-io.png" height="100px" alt="">
+      And save it into a file named `db.php`<br>
+      So that you will just be including it to files that ever need a database connection.
     </p>
     </article>
     <aside class="note">
       <section>
         <ul>
-          <li>For inserting media objects, like images, audio, video</li>
-          <li>Point out that using embed solutions of 3rd party chuva is more effecient.</li>
+          <li>Redo dir structure.</li>
         </ul>
       </section>
     </aside>
@@ -400,97 +412,67 @@ hello world!
   <!-- Action Tags -->
   <slide>
     <hgroup>
-      <h2>Action Tags</h2>
+      <h2>Read</h2>
     </hgroup>
     <article>
-      <ul>
-        <li>anchor tags(img)</li>
-        <li>others(input elements)</li>
-      </ul>
-      <pre class="prettyprint" data-lang="html">
-&lt;a href="http://google.com"&gt;Link to google.com&lt;/a&gt;
-&lt;button&gt;Button&lt;/button&gt;
-&lt;select&gt;
-  &lt;option value="1"&gt;Option 1&lt;/option&gt;
-  &lt;option value="2"&gt;Option 2&lt;/option&gt;
-&lt;/select&gt;
-    </pre>
-    <p>
-      Would result to something like<br>
-      <a href="//google.com">Link to google.com</a>
-      <button>Button</button>
-      <select>
-        <option value="1">Option 1</option>
-        <option value="2">Option 2</option>
-      </select>
-    </p>
-    </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point that action tags are tags that causes some behavior to the page, like redirecting to another page or another anchor</li>
-        </ul>
-      </section>
-    </aside>
-  </slide>
-  <!-- Layout Tags -->
-  <slide>
-    <hgroup>
-      <h2>Layout Tags</h2>
-      <h3>There are three types</h3>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Inline</li>
-        <li>Block</li>
-        <li>Inline Block</li>
-      </ul>
-      <hgroup>
-        <h2 style="background-color:yellow">For Example</h2>
-      </hgroup>
-      <br>
-    <pre class="prettyprint" data-lang="html" contenteditable>
-&lt;h2&gt;For Example&lt;/h2&gt;
+      <p>`signin.php` file</p>
+      <pre class="prettyprint" data-lang="php">
+&lt;?php
+include('../db.php');
+$user = filter_input(INPUT_POST, 'username');
+$pass = filter_input(INPUT_POST, 'password');
+$stmt = $db->prepare("SELECT id FROM users WHERE username = :usr AND password = :pwd");
+$stmt->execute(array(':user' => $user, ':pwd' => md5($pass)));
+$result = $stmt->rowCount();
+
+echo $result;
     </pre>
     </article>
-    <aside class="note">
-      <section>
-        <ul>
-          <li>Point that the props of layout tags are found in other tags too.</li>
-        </ul>
-      </section>
-    </aside>
   </slide>
-  <!-- Include Tags -->
+  <!-- Create Tags -->
   <slide>
     <hgroup>
-      <h2>Include Tags</h2>
+      <h2>Create</h2>
     </hgroup>
     <article>
-      <h2>For Example</h2>
-      <br>
     <pre class="prettyprint" data-lang="html">
-&lt;link rel="stylesheet" href="stylesheet/main.css"&gt;
-&lt;script src="scripts/main.js"&gt;&lt;/script&gt;
+$submit = filter_input(INPUT_POST, 'submit');
+if(isset($submit)) {
+  $user = filter_input(INPUT_POST, 'username');
+  $pass = filter_input(INPUT_POST, 'password');
+  $sql = "INSERT INTO users (username,password) VALUES (:user,:pass)";
+  $stmt = $dbh->prepare($sql);
+  $stmt->execute(array(':user'=>$user,
+                    ':pass'=>md5($pass)));
+ 
+}
     </pre>
     </article>
     <aside class="note">
       <section>
         <ul>
-          <li>Point out that these tags include styles and behavior to our markup.</li>
-          <li>Point that I may have missed some html elements, but those can be learned on your way.</li>
+          <li>First Create a register ui.</li>
         </ul>
       </section>
     </aside>
+  </slide>
+  <!-- Do it your own. -->
+  <slide class="segue dark quote nobackground">
+    <hgroup>
+      <h2>Update | Delete</h2>
+    </hgroup>
+    <article>
+      <h3>Do it on your own</h3>
+    </article>
   </slide>
   <slide class="segue dark quote nobackground">
-    <aside class="gdbar right bottom"><img src="images/stackoverflow-64.png"></aside>
+    <aside class="gdbar right bottom"><img src="images/phplogo.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <q>
-        Yes. There is a differentiation between src and href and they can't be used interchangeably. We use src for replaced elements while href for establishing a relationship between the referencing document and an external resource.
+        Session support in PHP consists of a way to preserve certain data across subsequent accesses. This enables you to build more customized applications and increase the appeal of your web site.
       </q>
       <div class="author">
-        <a href="//stackoverflow.com/a/7794936/1328014">apnerve</a>
+        <a href="//www.php.net/manual/en/intro.session.php">http://www.php.net/manual/en/intro.session.php</a>
       </div>
     </article>
   </slide>
@@ -498,45 +480,29 @@ hello world!
 
   <slide>
     <hgroup>
-      <h2> Ids and Classes</h2>
+      <h2> Example Usage</h2>
     </hgroup>
     <article class="smaller">
-      <p>
-        These two are called selectors or identifiers.<br>
-        <h3>Example</h3>
-<pre class="prettyprint" data-lang="html">
-&lt;div id="facebook" class="social-icon rotate"&gt;&lt;/div&gt;
-&lt;div id="twitter" class="social-icon"&gt;&lt;/div&gt;
-&lt;div class="clear"&gt;&lt;/div&gt;
-</pre>
-<br>
-<style>
-#facebook { background: url('images/facebook-icon.png'); }
-#twitter { background: url('images/twitter-icon.png'); }
-.social-icon { height: 32px; float: left; width: 32px; margin-right: 1em;}
-.rotate {-webkit-transform: rotate(45deg); }
-.clear { clear: both;}
-</style>
+    <p>
+      file: `signin.php`
+    </p>
+<pre class="prettyprint" data-lang="php">
+if($result == 1) {
+  session_start();
+  $_SESSION['user'] = $user;
+  $_SESSION['loggedin'] = true;
+  header('Location: members.php');
+} else {
+  header('Location: login.php');
+}
 
-<div id="facebook" class="social-icon rotate"></div>
-<div id="twitter" class="social-icon"></div>
-<div class="clear"></div>
-  <br>
-<pre class="prettyprint" data-lang="css">
-#facebook { background: url('images/facebook-icon.png'); }
-#twitter { background: url('images/twitter-icon.png'); }
-.social-icon { height: 32px; float: left; width: 32px; margin-right: 1em;}
-.rotate {-webkit-transform: rotate(45deg); }
 </pre>
-      </p>
 
     </article>
     <aside class="note">
       <section>
         <ul>
-          <li>Point out, that these are needed to have something you can call</li>
-          <li>Point that if you call "Aaron", si aaron lang ang lilingon.</li>
-          <li>But if you call, hey "Heart broken", si aaron at si jm lilingon</li>
+          <li>Then show session_destroy for logout</li>
         </ul>
       </section>
     </aside>
@@ -544,14 +510,6 @@ hello world!
 
   <!-- ZEN MODE -->
   <slide class="fill nobackground" style="background: url(images/zen2.jpg) center center">
-    <hgroup>
-      <h2 class="white">Moment of Zen</h2>
-    </hgroup>
-    <article>
-      <p class="white">Open for Questions</p>
-    </article>
-  </slide>
-  <slide class="fill nobackground" style="background: url(images/zen3.jpg) center center repeat-x; background-size: contain">
     <hgroup>
       <h2 class="white">Moment of Zen</h2>
     </hgroup>
